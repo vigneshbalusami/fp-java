@@ -1,22 +1,26 @@
 package com.emp.sample;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Employee {
+	@Id
 	private int id;
 	private String name;
 	private String emailId;
 	private long phone;
-	private String gender;
 
 	public Employee() {
 	}
 
-	public Employee(int id, String name, String emailId, long phone, String gender) {
+	public Employee(int id, String name, String emailId, long phone) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.emailId = emailId;
 		this.phone = phone;
-		this.gender = gender;
+
 	}
 
 	public int getId() {
@@ -45,14 +49,6 @@ public class Employee {
 
 	public void setPhone(long phone) {
 		this.phone = phone;
-	}
-
-	public String getGender() {
-		return gender;
-	}
-
-	public void setGender(String gender) {
-		this.gender = gender;
 	}
 
 	public void setId(int id) {
