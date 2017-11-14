@@ -3,9 +3,11 @@ package com.emp.sample;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.persistence.Transient;
 
 @Entity
+@Table(name = "Employee_Detail")
 public class Employee {
 	@Id
 	@Column(name = "Employee_Id")
