@@ -1,15 +1,33 @@
 package com.emp.sample;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 
 @Entity
 public class Employee {
 	@Id
+	@Column(name = "Employee_Id")
 	private int id;
+	@Column(name = "name", length = 250, nullable = false)
 	private String name;
+	@Column(name = "Email_Id", length = 50, nullable = false, unique = true)
 	private String emailId;
+	@Column(name = "Phone_number")
 	private long phone;
+	@Column(name = "Basic_salary")
+	private float basicSalary;
+	@Column(name = "DA")
+	private float dearnessAllovance;
+	@Column(name = "HRA")
+	private float houseRentAllowance;
+	@Column(name = "TA")
+	private float travelAllovance;
+	@Column(name = "PF")
+	private float providFund;
+	@Transient
+	private boolean gender;
 
 	public Employee() {
 	}
