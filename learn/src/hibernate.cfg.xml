@@ -31,7 +31,7 @@
 		<!-- Drop and re-create the database schema on startup -->
 		<property name="hbm2ddl.auto">create</property>
 
-		<!-- Names the annotated entity class -->
+		<!-- Names the annotated entity class --> 
 		<mapping class="com.emp.sample.Employee" />
 
 	</session-factory>
