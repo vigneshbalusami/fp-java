@@ -16,22 +16,31 @@ public class Solution {
 		SessionFactory sf = new Configuration().configure().buildSessionFactory();
 		Session session = sf.openSession();
 		session.beginTransaction();
+		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+		System.out.print("Enter Id : ");
+		int id = Integer.valueOf(bf.readLine());
+		System.out.print("Enter the name : ");
+		String name = bf.readLine();
+		System.out.print("Enter the email : ");
+		String emailId = bf.readLine();
+		System.out.print("Enter phone Number : ");
+		long phone = Long.valueOf(bf.readLine());
+		System.out.print("Enter the Basic Salary : ");
+		float basicSalary = Float.parseFloat(bf.readLine());
+		System.out.print("Enter the DearnessAllowance : ");
+		float dearnessAllowance = Float.parseFloat(bf.readLine());
+		System.out.print("Enter the HouseRentAllownace : ");
+		float houseRentAllowance = Float.parseFloat(bf.readLine());
+		System.out.print("Enter the travelAllownace : ");
+		float travelAllowance = Float.parseFloat(bf.readLine());
+		System.out.print("Enter the ProvidentFund : ");
+		float providentFund = Float.parseFloat(bf.readLine());
+		System.out.print("Enter the Gender : ");
+		//boolean gender = 
 		Employee employee = new Employee();
-		/*
-		 * BufferedReader bf = new BufferedReader(new
-		 * InputStreamReader(System.in)); System.out.print("Enter Id : "); int
-		 * id = Integer.valueOf(bf.readLine());
-		 * System.out.print("Enter the name : "); String name = bf.readLine();
-		 * System.out.print("Enter the email : "); String emailId =
-		 * bf.readLine(); System.out.print("Enter phone Number : "); long phone
-		 * = Long.valueOf(bf.readLine()); Employee employee = new Employee(id,
-		 * name, emailId, phone); System.out.println(employee.getId() + " " +
-		 * employee.getName() + " " + employee.getEmailId() + " " +
-		 * employee.getPhone() );*/
 		session.save(employee);
-		
+
 		session.getTransaction().commit();
 		session.close();
 	}
-
 }
