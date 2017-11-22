@@ -19,11 +19,13 @@ public class Solution {
 		System.out.println(item.getName());
 		System.out.println(item.getQty());
 		session.beginTransaction();
-		item.setName("23234");
-		item.setQty(34);
+		item.setId(1);
+		item.setName("2222");
+		item.setQty(324);
 		session.update(item);
+		session.delete(item);
 		session.getTransaction().commit();
-		//session.save(item);
+		session.save(item);
 		session.close();
 		System.out.println("updated");
 		
