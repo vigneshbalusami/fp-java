@@ -29,6 +29,9 @@ public class Item {
 		this.name = name;
 		this.qty = qty;
 	}
+	public Item(){
+		
+	}
 
 	public int getId() {
 		return id;
