@@ -1,2 +1,2 @@
-#this is new
---Solution.java-- main class
+this is java program 
+this is a high level language
